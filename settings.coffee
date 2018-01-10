@@ -1,6 +1,8 @@
 exports.server =
+    # redis_db_number: 2
     redis_port: process.env.REDIS_PORT || 6379
     redis_host: process.env.REDIS_HOST || 'localhost'
+    redis_auth: process.env.REDIS_AUTH || undefined
     tcp_port: process.env.PORT || 80
     udp_port: process.env.PORT || 80
     access_log: yes
