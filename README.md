@@ -1,3 +1,4 @@
+
 # Munso Push Server
 
 [![pushd](https://img.shields.io/badge/based%20on-pushd-blue.svg?style=flat-square)](https://github.com/rs/pushd)
@@ -57,3 +58,15 @@ With following parameters :
 > There are two specifics event names, in which case notifications can be sent without a subscription:
 > - `broadcast` sends the notification to all subscribers
 > - `unicast:SUBSCRIBER_ID` sends the notification to the subscriber with the specified id
+
+
+
+Certificates
+-------
+
+For APNs certificates, you'll have to convert a `[certificate].cer` and `[key].p12` into `[certificate].pem` and `[key].pem` :
+
+```bash
+openssl x509 -in cert-prod.cer -inform DER -outform PEM -out apns-cert-prod.pem
+openssl pkcs12 -in key-prod.p12 -out apns-key-prod.pem -nodes
+```
