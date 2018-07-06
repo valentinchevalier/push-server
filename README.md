@@ -12,6 +12,34 @@ Installation
 - Start redis: `redis-server`
 - Start the server: `coffee pushd.coffee`
 
+
+Starting the push server
+------------
+
+To start the server once :
+
+``` bash
+npm run start:prod
+```
+
+To start the server for developpement :
+
+``` bash
+npm run start:dev
+```
+
+To run the Push Server continuously :
+
+``` bash
+npm run forever
+```
+
+> So the push server run continuously, we use [forever](https://github.com/foreverjs/forever).
+
+### Heroku
+
+There is a Procfile so the server can easily be host on Heroku.
+
 API
 ---
 
