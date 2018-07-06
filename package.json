@@ -2,10 +2,9 @@
     "name": "munso-push-server",
     "scripts": {
         "start": "sudo node server.js",
-
         "start:prod": "coffee pushd.coffee",
         "start:dev": "coffee pushd.coffee --env=dev",
-        "forever": "forever coffee pushd.coffee -l server.log"
+        "forever": "forever -l server.log start -c coffee pushd.coffee"
     },
     "dependencies": {
         "coffee-script": "~1.8.0",
